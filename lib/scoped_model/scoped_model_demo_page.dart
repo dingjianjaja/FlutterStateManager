@@ -61,6 +61,7 @@ class _ScopedModelDemoPageState extends State<ScopedModelDemoPage> {
                     scrollDirection: Axis.horizontal,
                     itemCount: mainModel.items.length,
                     itemBuilder: (context, index) {
+                      print('itemBuilder:$index');
                       Color randColor = RandomColor.randomColor();
                       return SizedBox(
                         width: 100,

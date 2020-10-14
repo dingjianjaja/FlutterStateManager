@@ -2,6 +2,7 @@ import 'package:DJStateManager/bloc/bloc_demo_page.dart';
 import 'package:DJStateManager/provider/provider_demo_page.dart';
 import 'package:DJStateManager/scoped_model/scoped_model_demo_page.dart';
 import 'package:DJStateManager/states_rebuilder/states_rebuilder_page.dart';
+import 'package:DJStateManager/states_rebuilder/states_rebuilder_page2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -52,24 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 child: Column(
                   children: <Widget>[
-                    Icon(Icons.print),
+                    Image.asset('images/scopedModel.png',width: 80,),
                     Text('scopedModel'),
-                  ],
-                ),
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ProviderDemoPage()));
-              },
-              child: Container(
-                child: Column(
-                  children: <Widget>[
-                    Icon(Icons.print),
-                    Text('provider'),
                   ],
                 ),
               ),
@@ -84,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 child: Column(
                   children: <Widget>[
-                    Icon(Icons.print),
+                    Image.asset('images/bloc.png',width: 80,),
                     Text('bloc'),
                   ],
                 ),
@@ -100,8 +85,24 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 child: Column(
                   children: <Widget>[
-                    Icon(Icons.print),
-                    Text('states_rebuilder'),
+                    Image.asset('images/statesRebuilder.png',width: 80,),
+                    Text('statesRebuilder1'),
+                  ],
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => StateReBuilderDemoPage2()));
+              },
+              child: Container(
+                child: Column(
+                  children: <Widget>[
+                    Image.asset('images/statesRebuilder.png',width: 80,),
+                    Text('statesRebuilder2'),
                   ],
                 ),
               ),

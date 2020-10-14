@@ -5,12 +5,12 @@ import 'package:DJStateManager/states_rebuilder/main_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
-class StateReBuilderDemoPage extends StatefulWidget {
+class StateReBuilderDemoPage2 extends StatefulWidget {
   @override
-  _StateReBuilderDemoPageState createState() => _StateReBuilderDemoPageState();
+  _StateReBuilderDemoPageState2 createState() => _StateReBuilderDemoPageState2();
 }
 
-class _StateReBuilderDemoPageState extends State<StateReBuilderDemoPage> {
+class _StateReBuilderDemoPageState2 extends State<StateReBuilderDemoPage2> {
   MainBloc mainBloc;
 
   @override
@@ -44,6 +44,9 @@ class _StateReBuilderDemoPageState extends State<StateReBuilderDemoPage> {
                     return SizedBox(
                       width: 100,
                       child: StateBuilder(
+                        initState: (ctx,_){
+                          return mainBloc.updateTappedTag(ctx, index);
+                        },
                         models: [mainBloc],
                         builder: (context, _) {
                           return ItemCard(
