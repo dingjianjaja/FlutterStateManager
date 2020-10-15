@@ -62,6 +62,7 @@ class _ScopedModelDemoPageState extends State<ScopedModelDemoPage> {
                     itemCount: mainModel.items.length,
                     itemBuilder: (context, index) {
                       print('itemBuilder:$index');
+                      /// 每张卡都有随机的颜色。每次重建ListView时，颜色都会随机变化
                       Color randColor = RandomColor.randomColor();
                       return SizedBox(
                         width: 100,

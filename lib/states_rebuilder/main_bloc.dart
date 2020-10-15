@@ -13,6 +13,7 @@ class MainBloc extends StatesRebuilder {
   int detailedIndex;
   BuildContext tappedCardTag;
 
+  /// 这里的“ context”保存了要在mainBloc内部使用的小部件的标签
   fetchItems(BuildContext tag) async {
     items = await itemProvider.fetchItems();
 
